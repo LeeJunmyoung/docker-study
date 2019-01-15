@@ -17,3 +17,43 @@
 ```
 # docker images <이미지명>
 ```
+
+## run
+> 새로운 컨테이너를 만드는 명령어
+```
+# docker run <옵션> <이미지 명> <실행할 파일>  
+# docker run -i -t  --name centos centos /bin/bash  
+// -i (interactive) : 입력을 받는  -t (pseudo-TTY) : terminal
+```
+
+## ps
+> 컨테이너 목록 출력
+```
+# docker ps -a
+```
+
+## start,stop,restart
+> 컨테이너  실행,정지,재실행
+```
+# docker <start,stop,restart> <컨테이너 이름, ID>
+```
+
+## attach
+> 컨테이너를 접속하는 명령어
+```
+# docker attach <컨테이너 이름, ID>
+```
+
+## rm
+> 생성된 컨테이너 삭제
+```
+# docker rm <컨테이너 이름, ID>
+```
+
+## rmi
+> 이미지 삭제
+```
+# docker rmi <이미지 이름>:<태그>
+```
+
+
