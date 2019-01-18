@@ -63,3 +63,12 @@ EXPOSE 443
 ```
 # docekr cp hello-nginx:/etc/nginx/nginx.conf ./
 ```
+
+## commit
+> docker commit  명령은 컨테이너의 변경 사항을 이미지 파일로 생성함.
+> docker commit <옵션> <컨테이너 이름> <이미지 이름>:<태그>
+```
+# docker commit -a "FOO Bar <foo@barr.com>" -m "add hello.txt" hello-nginx hello:0.2
+```
+*docker images 를 검색해보면 hello:0.2 이미지가 생성되어 있다.
+
