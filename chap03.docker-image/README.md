@@ -53,7 +53,13 @@ EXPOSE 443
 ## history
 > 이미지의 히스토리를 조회
 > docker history <이미지 이름>:<태그>
+```
+# docker history hello:0.1
+```
 
 ## cp
 > 컨테이너의 파일을 이동
 > docker cp <컨테이너 이름>:<경로> <호스트 경로>
+```
+# docekr cp hello-nginx:/etc/nginx/nginx.conf ./
+```
