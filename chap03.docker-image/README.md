@@ -51,24 +51,34 @@ EXPOSE 443
 3. -v /root/data:/data 옵션으로 호스트의 /root/data 디렉토리를 컨테이너의 /data 디렉토리에 연결합니다.
 
 ## history
-> 이미지의 히스토리를 조회
-> docker history <이미지 이름>:<태그>
+> 이미지의 히스토리를 조회  
+> docker history <이미지 이름>:<태그>  
 ```
 # docker history hello:0.1
 ```
 
 ## cp
-> 컨테이너의 파일을 이동
-> docker cp <컨테이너 이름>:<경로> <호스트 경로>
+> 컨테이너의 파일을 이동  
+> docker cp <컨테이너 이름>:<경로> <호스트 경로>  
 ```
 # docekr cp hello-nginx:/etc/nginx/nginx.conf ./
 ```
 
 ## commit
-> docker commit  명령은 컨테이너의 변경 사항을 이미지 파일로 생성함.
-> docker commit <옵션> <컨테이너 이름> <이미지 이름>:<태그>
+> docker commit  명령은 컨테이너의 변경 사항을 이미지 파일로 생성함.  
+> docker commit <옵션> <컨테이너 이름> <이미지 이름>:<태그>  
 ```
 # docker commit -a "FOO Bar <foo@barr.com>" -m "add hello.txt" hello-nginx hello:0.2
 ```
 *docker images 를 검색해보면 hello:0.2 이미지가 생성되어 있다.
+
+## diff
+> docker diff 명령은 컨테이너가 실행되면서 변경된 파일 목록을 출력  
+> 비교 기준은 컨테이너를 생성한 이미지 내용.
+```
+# docker diff hello-nginx
+```
+1. A는 추가된 파일  
+2. C는 변경된 파일  
+3. D는 삭제된 파일  
 
