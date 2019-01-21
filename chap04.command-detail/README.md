@@ -1,0 +1,38 @@
+# command detail
+> docker 명령은 기본저긍로 docker hub 를 사용함.    
+> docker 저장소 서버는 docker 레지스트리 서버함.    
+> docker push 명령으로 레지스트리 서버에 이미지를 올리고 , docker pull 명령으로 받으수 있음.  
+
+## 로컬에 이미지 데이터 저장
+```
+# 도커 레지스트리 이미지를 받음
+# docker pull registry:latest
+```
+
+```
+# registry:latest이미지를 컨테이너로 실행
+# docker run -d -p 5000:5000 --name hello-registry \
+  -v /tmp/registry:/tmp/registry\
+  registry
+```
+* 이미지 파일은 /tmp/registry 디레터리에 저장됌.
+
+## push 명령으로 이미지 올리기
+> hello:0.1 이미지를 개인 저장소에 올리기.
+```
+# docker tag hello:0.1 localhost:5000/hello:0.1
+# docker push localhost:5000/hello:0.1
+```
+태그를 생성하는 명령은 docker tag <이미지 이름>:<태그> <docker 레지스트리 url>/<이미지 이름>:<태그>    
+이미지를 올리는 명령은 docker push <docker 레지스트리 url>/<이미지 이름>:<태그>    
+
+1. 개인 저장소에 이미지를 올릴때는 태그를 먼저 생성해야 함.    
+2. docker tag 명령으로 태그를 생성함.    
+3. docker push 명령으로 이미지를 개인 저장소에 올림.  
+4. 이제 다른 서버에서 개인 저장소에 접속하여 이미지를 받아올수 있음.  
+
+```
+# docker pull 192.168.0.111:5000/hello:0.1
+```
+
+
