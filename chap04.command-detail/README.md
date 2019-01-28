@@ -35,4 +35,11 @@
 # docker pull 192.168.0.111:5000/hello:0.1
 ```
 
-
+## 컨테이너 연결하기 
+> docker 컨테이너끼리 연결할 때는 docker run 명령에서 --link 옵션을 사용함.  
+```
+# 몽고 디비 생성
+# docker run --name db -d mongo
+# web 컨테이너르 생성하면서 db 컨테이너와 연결. nginx 생성
+# docker run --name web -d -p 80:80 --link db:db nginx
+```
