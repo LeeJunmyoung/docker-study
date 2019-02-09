@@ -43,3 +43,9 @@
 # web 컨테이너르 생성하면서 db 컨테이너와 연결. nginx 생성
 # docker run --name web -d -p 80:80 --link db:db nginx
 ```
+
+## DB
+> mysql 연결
+```
+#  docker run --name mysql  -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=1234 mysql:5.7
+```
