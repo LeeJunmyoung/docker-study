@@ -43,9 +43,34 @@
 # web 컨테이너르 생성하면서 db 컨테이너와 연결. nginx 생성
 # docker run --name web -d -p 80:80 --link db:db nginx
 ```
+> link 옵션은 추후 사라질 예정. 1.9.0 버전 이후 --network 라는 옵션이 추가됨.
+```
+# 네트워크 생성
+# docker network create hello-network
+
+# 몽고디비 네트워크 설정 후 실행
+# docker run --name db -d --network hello-network mongo
+
+# nginx 네트워크 설정후 실행
+# docker run --name web -d -p 80:80 --network hello-network nginx
+
+# nginx 접속
+# docker exec -it web bash
+
+# ping 설치
+# apt-get update
+# apt-get install iputils-ping
+ 
+# ping db 연결 확인
+# ping db 
+```
+
+
 
 ## DB
 > mysql 연결
 ```
 #  docker run --name mysql  -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=1234 mysql:5.7
 ```
+
+
