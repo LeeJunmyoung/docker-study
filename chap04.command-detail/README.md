@@ -65,6 +65,15 @@
 # ping db 
 ```
 
+## 데이터 볼륨 컨테이너 사용하기.
+> 일반 컨테이너에서 데이터 볼륨 컨테이너를 연결하면 데이터 볼륨 컨테이너 안의 데이터 볼륨 디렉토리에 접근할수 있다.
+```
+# 서버의 /root/data를 hello-volume /data와 volume을 연결하는 옵션 사용 
+# docker run -it --name hello-volume -v /root/data:/data ubuntu /bin/bash
+# hello-volume에 /data 를 hello에 /data로 연결 --volumes-from 옵션을 사용해 데이터 볼륨 컨테이너에 볼륨을 공유할수 있다.
+# docker run -it --volumes-from hello-volume -name hello ubuntu /bin/bash
+```
+
 
 
 ## DB
