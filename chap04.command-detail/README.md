@@ -112,6 +112,43 @@
 # cat /etc/centos-release
 ```
 
+### 빈 베이스 이미지 생성
+> 아무것도 들어있지 않은 베이스 이미지를 생성하는 방법.  
+> docker 에서는 빈 베이스 이미지를 scratch이미지 라고 부름.  
+
+```
+# /dev/null 장치를 이용하면 빈 tar파이을 만들어서 docker import 명령에 전달 가능.
+# tar cv --files-from /dev/null | docker import -scratch
+
+# 빈 이미지에 넣을 Dockerfile 생성
+# mkdir hello && cd hello
+
+# hello.c 생성
+#################
+# vim hello.c
+# #include <stdio.h> 
+# int main(){
+#   printf("hello Docker\n");
+#   return 0;
+# }
+#################
+# gcc hello.c -static -o hello
+
+# Dockerfile 생성
+#################
+# vim Dockerfile
+# FROM scratch
+# ADD ./hello /hello
+# CMD ["/hello"]
+#################
+
+# image build
+# docker build --tag hello:0.1 .
+
+# 공백이미지에서 dockerfile만든 이미지 실행
+# docker run --rm hello:0.1
+# hello Docker < 확인 가능
+```
 
 ## DB
 > mysql 연결
