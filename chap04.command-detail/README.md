@@ -95,6 +95,24 @@
 ```
 
 
+### Centos
+```
+# centos 용 부트스트랩 바이너리 파일 다운
+#  yum install febootstrap
+
+# febootstrap 으로 centos6.9 바이너리 파일 다운
+# febootstrap -u http://vault.centos.org/6.5/updates/x86_64/ \
+    centos65 centos65 http://vault.centos.org/6.5/isos/x86_64/
+
+# docker import 명령으로 베이스 이미지 생성
+# tar -C centos65 -c . | docker import  - centos65
+
+# centos 이미지 버전 확인
+# docker run -it --name hello centos65 /bin/bash
+# cat /etc/centos-release
+```
+
+
 ## DB
 > mysql 연결
 ```
