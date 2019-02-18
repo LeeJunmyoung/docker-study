@@ -74,6 +74,26 @@
 # docker run -it --volumes-from hello-volume -name hello ubuntu /bin/bash
 ```
 
+## Docker 베이스 이미지 생성하기
+
+### ubuntu
+```
+# 우분투 리눅스용 부트스트랩 바이너리 파일 설치
+# apt-get install debootstrap
+
+# trusty(ubuntu 14.04) 바이너리 파일 받기
+# debootstrap trusty trusty
+
+# docker import 명령으로 베이스 이미지를 생성한다.
+# tar -C trusty -c . | docker import - trusty
+# docker import < URL 또는 - > <이미지 이름>:<태그>
+# docker import http://example.com/trusty.tgz trustty
+
+# trusty 로 컨테이너 생성 후 우분투 버전 확인
+# docker run -it --name hello trusty /bin/bash
+# cat /etc/lsb-release
+```
+
 
 
 ## DB
