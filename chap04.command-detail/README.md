@@ -81,7 +81,7 @@
 # 우분투 리눅스용 부트스트랩 바이너리 파일 설치
 # apt-get install debootstrap
 
-# trusty(ubuntu 14.04) 바이너리 파일 받기
+# trusty(ubuntu 14.04) 바이너리 파일 받기 (trusty 는 우분투 코드네임)
 # debootstrap trusty trusty
 
 # docker import 명령으로 베이스 이미지를 생성한다.
@@ -93,7 +93,6 @@
 # docker run -it --name hello trusty /bin/bash
 # cat /etc/lsb-release
 ```
-
 
 
 ## DB
