@@ -150,6 +150,22 @@
 # hello Docker < 확인 가능
 ```
 
+## docker 안에서 docker 실행하기
+```
+# docker in docker git clone
+# git clone https://github.com/LeeJunmyoung/dind.git && cd dind
+
+# docker 이미지 생성
+# docker build --tag dind
+
+# docker dind 실행
+# docker run -it --privileged dind
+# privileged 옵션이 컨테이너 안에서 호스트의 리눅스 커널을 모두사용할수 있게 해줌. 
+
+# dind안에서 docker 명령 실행
+```
+
+
 ## DB
 > mysql 연결
 ```
