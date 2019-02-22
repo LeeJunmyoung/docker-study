@@ -67,3 +67,13 @@ EXPOSE 80
 EXPOSE 443
 EXPOSE 80 443
 ```
+
+## ENV
+> ENV는 환경 변수를 설정함.  
+> ENV로 설정한 환경변수는 RUN,CMD,ENTRYPOINT에 적용됨.
+> -e <환경 변수>=<값>
+```
+ENV GOPATH /go
+ENV PATH /go/bin:$PATH
+ENV <환경변수> <값>
+```
