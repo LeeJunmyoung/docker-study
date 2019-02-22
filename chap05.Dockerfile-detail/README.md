@@ -16,3 +16,18 @@ FROM <이미지> 또는 FROM <이미지>:<태그>
 ```
 MAINTAINER Lee, Junmyoung <leejm1@gbnet.kr>
 ```
+
+## RUN
+> RUN 은 FROM 에서 설정한 이미지 위엥서 스크립트 혹은 명령을 실행함.  
+> RUN으로 실행한 결과가 새이미지로 생성되고, 실행 내역은 이미지의 히스토리에 기록됨.  
+```
+# 셀 출력
+RUN apt-get install -y nginx
+RUN echo "hello Docker" > /tmp/hello
+```
+
+```
+#셀 미출력
+RUN ["apt-get","install","-y","nginx"]
+RUN ["echo","'hello Docker'",">","/tmp/hello"]
+```
