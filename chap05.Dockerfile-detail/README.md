@@ -57,3 +57,13 @@ ENTRYPOINT <명령>
 ENTRYPOINT ["/home/hello.sh","--hello=1","--world=2"]
 ENTRYPOINT ["<실행파일>","<매개변수1>","<매개변수2>"]
 ```
+
+## EXPOSE 
+> EXPOSE 는 호스트와 연결할 포트 번호를 설정함.  
+> docker run 명령의 --expose 옵션과 동일  
+> EXPOSE 는 호슽와 연결만 할 뿐 외부에 노출은 되지 않음. 그러니 -p 옵션을 사용해야함.  
+```
+EXPOSE 80
+EXPOSE 443
+EXPOSE 80 443
+```
