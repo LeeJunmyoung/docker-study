@@ -45,3 +45,15 @@ CMD ["redis-server"]
 CMD ["mysqld","--datador=/var/lib/mysql","--user=mysql"]
 CMD ["<실행파일>","<매개변수1>","<매개변수2>"]
 ```
+
+## ENTRYPOINT
+> ENTRYPOINT 는 컨테이너가 시작되었을 때 스크립트 혹은 명령을 실행함  
+> 즉, docker run으로 컨테이너를 생성하거나 docker start명령으로 정지된 컨테이너를 실행할때  
+> ENTRYPOINT는 Dockerfile에서 단 한 번만 사용할 수 있습니다.  
+```
+ENTRYPOINT touch /home/hello/hello.txt
+ENTRYPOINT <명령>
+======================================
+ENTRYPOINT ["/home/hello.sh","--hello=1","--world=2"]
+ENTRYPOINT ["<실행파일>","<매개변수1>","<매개변수2>"]
+```
