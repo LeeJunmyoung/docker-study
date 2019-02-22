@@ -31,3 +31,17 @@ RUN echo "hello Docker" > /tmp/hello
 RUN ["apt-get","install","-y","nginx"]
 RUN ["echo","'hello Docker'",">","/tmp/hello"]
 ```
+
+## CMD
+> CMD는 컨테이너가 시작 되었을때 스크립트 혹은 명령을 실행함.  
+> 즉 Docker run 명령으로 컨테이너를 생성하거나 docker start 명령으로 정지된 컨테이너를 시작할 때 실행됨.  
+> CMD는 Dockerfile 에서 한 번만 사용할 수 있음.
+
+```
+CMD touch /home/hello/hello.txt
+CMD <명령>
+===================
+CMD ["redis-server"]
+CMD ["mysqld","--datador=/var/lib/mysql","--user=mysql"]
+CMD ["<실행파일>","<매개변수1>","<매개변수2>"]
+```
