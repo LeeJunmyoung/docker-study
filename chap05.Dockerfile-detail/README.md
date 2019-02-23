@@ -89,3 +89,13 @@ ADD hello-entrypoint.sh /entrypoint.sh
 ADD hello-dir /hello-dir
 ADD http://example.com/hello.html /home/hello
 ```
+
+## COPY
+> COPY는 파일을 이미지에 추가함.   
+> ADD와 달리 COPY는 압축파일을 추가할때 압축을 해제하지 않고 , 파일 URL도 사용할수 없음.    
+> COPY <복사할 파일 경로> <이미지에서 파일이 위치할 경로>  
+> <복사할 파일경로>는 폴더도 가능. 파일 URL불가능
+```
+COPY compress.tar.gz /compress.tar.gz
+```
+
