@@ -102,10 +102,20 @@ COPY compress.tar.gz /compress.tar.gz
 ## USER
 > USER는 명령을 실행할 사용자 계정을 설정.  
 > RUN, CMD, ENTRYPOINT에 적용 됨.
+> USER <계정 사용자명>
 ```
 USER nobody
 RUN touch /tmp/hello.txt
 
 USER root
 RUN touch /hello.txt
+```
+
+## WORKDIR
+> WORKDIR은 RUN, CMD, ENTRYPOINT 의 명령이 실행될 디렉터리를 설정.  
+```
+WORKDIR /var/www
+================
+WORKDIR /var
+WORKDIR www
 ```
