@@ -77,3 +77,15 @@ ENV GOPATH /go
 ENV PATH /go/bin:$PATH
 ENV <환경변수> <값>
 ```
+
+## ADD
+> ADD는 파일을 이미지에 추가함.  
+> ADD <복사할 파일 경로> <이미지에서 파일이 위치할 경로>  
+> 컨테스트 아래를 기준으로 하여 컨테스트 바깥의 파일, 디렉토리에 절대 경로 사용 불가.
+> <복사할 파일경로> 는 인터넷 URL사용가능  
+> <이미지에서 파일이 위치할 경로>는 항상 절대경로  
+```
+ADD hello-entrypoint.sh /entrypoint.sh
+ADD hello-dir /hello-dir
+ADD http://example.com/hello.html /home/hello
+```
