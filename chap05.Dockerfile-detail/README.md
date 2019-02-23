@@ -119,3 +119,7 @@ WORKDIR /var/www
 WORKDIR /var
 WORKDIR www
 ```
+
+## ONBUILD
+> ONBUILD는 생성한 이미지를 기반으로 다른 이미지가 생성될 때 명령을 실행.
+> 자식 이미지에서만 적용 되고 , 손자이미지에는 적용되지 않음.
