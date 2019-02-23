@@ -99,3 +99,13 @@ ADD http://example.com/hello.html /home/hello
 COPY compress.tar.gz /compress.tar.gz
 ```
 
+## USER
+> USER는 명령을 실행할 사용자 계정을 설정.  
+> RUN, CMD, ENTRYPOINT에 적용 됨.
+```
+USER nobody
+RUN touch /tmp/hello.txt
+
+USER root
+RUN touch /hello.txt
+```
