@@ -22,3 +22,8 @@ RUN npm install
 
 CMD nodejs app.js
 ```
+
+## SSH 키 생성
+```
+ssh-keygen
+```
