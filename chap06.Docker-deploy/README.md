@@ -47,4 +47,6 @@ ssh-keygen
 # vi authorized_keys
 # 기존에 만든 ssh-keygen에 공개키를 넣어준다.
 # chmod 600 authorized_keys
+
+# git hooks 설정
 ```
