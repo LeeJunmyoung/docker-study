@@ -36,6 +36,7 @@ ssh-keygen
 # 개발자 pc 에서 puch 한 소스를 받을 수 있도록 receive.denycurrentbranch를 ignore로 설정
 # git init exampleapp
 # cd exampleapp && git config receive.denycurrentbranch ignore
+# pwd 해서 나온 경로를 나중에 git remote add origin ssh://<계정>@<IP>:<PORT>/<pwd 경로> 
 
 # docker 설치
 
