@@ -27,3 +27,23 @@ CMD nodejs app.js
 ```
 ssh-keygen
 ```
+
+## 서버 설정
+```
+# git 설치
+# apt-get install git
+
+# 개발자 pc 에서 puch 한 소스를 받을 수 있도록 receive.denycurrentbranch를 ignore로 설정
+# git init exampleapp
+# cd exampleapp && git config receive.denycurrentbranch ignore
+
+# docker 설치
+
+# ssh 키 설정
+# cd /home/<서버 사용자 계정>
+# mkdir .ssh
+# chmod 700 .ssh
+# vi authorized_keys
+# 기존에 만든 ssh-keygen에 공개키를 넣어준다.
+# chmod 600 authorized_keys
+```
