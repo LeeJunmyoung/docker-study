@@ -64,7 +64,7 @@ cd $APP_DIR
 docker build --tag $APP_NAME:$REVISION .
 docker stop $APP_NAME
 docker rm $APP_NAME
-docker run -d --name $APP_NAME -p 80:80 $APP_NAME:$REVISㅑON
+docker run -d --name $APP_NAME -p 80:80 $APP_NAME:$REVISION
 #######################
 # chmod +x post-receive
 ```
