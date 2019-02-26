@@ -10,4 +10,4 @@ WORKDIR /var/www
 
 RUN npm install
 
-CMD nodejs app.js
+CMD node app.js

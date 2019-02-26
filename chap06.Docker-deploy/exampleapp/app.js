@@ -5,4 +5,4 @@ app.get('/',(req,res)=>{
     res.send('Hello Docker');
 });
 
-app.listen(8888);
+app.listen(80);
