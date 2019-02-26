@@ -67,3 +67,14 @@ docker run -d -name $APP_NAME -p 80:80 $APP_NAME:$REVISON
 #######################
 # chmod +x post-receive
 ```
+
+## push 하기(개발자 PC)
+```
+# 원격 저장소 확인
+# git remote -v
+
+# push 하기
+# git push origin master
+
+# 이러면 docker가 뜨는걸 확인할수 있다.
+```
