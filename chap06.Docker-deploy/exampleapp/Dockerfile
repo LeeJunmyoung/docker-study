@@ -8,6 +8,7 @@ ADD package.json /var /www/package.json
 
 WORKDIR /var/www
 
+RUN npm config set strict-ssl false
 RUN npm install
 
-CMD node app.js
+CMD nodejs app.js
