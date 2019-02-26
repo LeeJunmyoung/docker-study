@@ -49,4 +49,21 @@ ssh-keygen
 # chmod 600 authorized_keys
 
 # git hooks 설정
+#######################
+.git/hooks/post-receive
+#!/bin/bash
+
+APP_NAME=exampleapp
+APP_DIR=$HOME/$APP_NAME
+REVISION=(git rev-parse --verify HEAD)
+
+GIT_WORK_TREE=$APP_DIR git checkout -f
+
+cd $APP_DIR
+docker build --tag $APP_NAME:$REVISION .
+docker stop $APP_NAME
+docker rm $APP_NAME
+docker run -d -name $APP_NAME -p 80:80 $APP_NAME:$REVISON
+#######################
+# chmod +x post-receive
 ```
