@@ -53,3 +53,17 @@ RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 ```
+
+```
+# entrypoint.sh
+
+
+#!/bin/bash
+
+service carbon-cache start
+service elasticsearch start
+
+apachectl -DFOREGROUND
+
+```
+
