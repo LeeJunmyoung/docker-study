@@ -69,7 +69,8 @@ apachectl -DFOREGROUND
 
 ``` 
 # config.js grafana 설정 파일
-
+# ip는 localhost 와같은 루프백 주소는 설정하면 안된다.
+# ip는 모니터링 서버ip주소이므로 서버의 도메인 또는 ip주소를 입력한다.
 define(['settings'],
 function (Settings) {
   "use strict";
