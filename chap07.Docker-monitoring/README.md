@@ -103,4 +103,14 @@ function (Settings) {
   });
 });
 ```
+## 실행
+```
+## 이미지 생성
+docker build --tag diamond .
 
+## 시간 동기화
+ntpdate time2.kriss.re.kr
+
+## 컨테이너 실행
+docker run -d --name app1 -p 80:80 -e GRAPHITE_HOST=<ip> diamond
+```
