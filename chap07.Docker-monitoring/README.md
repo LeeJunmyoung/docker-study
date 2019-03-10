@@ -36,6 +36,7 @@ RUN update-rc.d elasticsearch defaults
 RUN apt-get install -y nodejs npm
 RUN ln -s /usr/bin/nodejs /usr/local/bin/node
 ## 이것도 다운.. 하다보니 에러남...
+## PhantomJS(팬텀JS)는 웹 페이지 상호작용을 자동화하기 위해 사용되는 헤드리스 브라우저이다
 RUN apt-get install phantomjs
 
 ## grafana소스를 받은 뒤 압축해제하고 /usr/share/grafana로 이동
