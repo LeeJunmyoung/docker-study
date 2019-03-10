@@ -35,6 +35,8 @@ RUN update-rc.d elasticsearch defaults
 ## node로 링크 안하면 중간에 에러 발생
 RUN apt-get install -y nodejs npm
 RUN ln -s /usr/bin/nodejs /usr/local/bin/node
+## 이것도 다운.. 하다보니 에러남...
+RUN apt-get install phantomjs
 
 ## grafana소스를 받은 뒤 압축해제하고 /usr/share/grafana로 이동
 RUN curl https://codeload.github.com/grafana/grafana/tar.gz/v1.7.0 | tar -xz
@@ -42,6 +44,10 @@ RUN mv grafana-1.7.0 /usr/share/grafana
 
 ## npm install 을 실행하여 grafana에 필요한 모듈 설치 , css를 생성하기 위해 grunt를 실행
 WORKDIR /usr/share/grafana
+
+# 아래와 같은 npm ssl 관련된 설정을 해줘야함. 둘중에 하나ㅊ
+#npm config set strict-ssl false
+#npm config set registry="http://registry.npmjs.org/" 
 RUN npm install
 RUN node_modules/grunt-cli/bin/grunt
 RUN echo "alias /grafana /usr/share/grafana/src" > /etc/apache2/sites-enabled/grafana.conf
