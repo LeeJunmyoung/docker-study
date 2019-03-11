@@ -1,4 +1,4 @@
-# Docker-monitoring
+# Docker-monitoring - 모니터링 서버
 > docker 로 서비스를 구축 했을때 서버의 cpu 메모리 사용량을 모니터링 할 필요성이 있음.
 > Graphite는 서버의 자원을 모니터링 하고 그래프를 출력해주는 오픈소스 도구.
 > * 이미지 생성하는데 오래걸린다. 인내심을 가지고 기다리자!!
@@ -122,3 +122,4 @@ ntpdate time2.kriss.re.kr
 ## 컨테이너 실행
 docker run -d --name app1 -p 80:80 -e GRAPHITE_HOST=<ip> diamond
 ```
+
