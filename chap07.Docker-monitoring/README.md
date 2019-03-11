@@ -151,3 +151,17 @@ ENTRYPOINT ["/entrypoint.sh"]
 EXPOSE 80
 EXPOSE 443
 ```
+
+
+```
+# entrypoint.sh
+
+#!/bin/bash
+
+sed -i "s/host = graphite/host = $GRAPHITE_HOST/g" /etc/diamond/diamond.conf
+diamond
+
+cd /etc/nginx
+nginx
+```
+
