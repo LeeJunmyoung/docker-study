@@ -40,7 +40,7 @@ EXPOSE 443
 
 ## Build 명령으로 이미지 생성
 > ~/example$ docker build --tag hello:0.1 .  
-> docker build <옵션> <Dockerfile 경로>
+> docker build <옵션> <Dockerfile 경로> . < 콤마 명심.....
 
 
 ## 확인
