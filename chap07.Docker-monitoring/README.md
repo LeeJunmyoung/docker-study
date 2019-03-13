@@ -114,13 +114,13 @@ function (Settings) {
 ## 실행
 ```
 ## 이미지 생성
-docker build --tag diamond .
+docker build --tag graphite .
 
 ## 시간 동기화
 ntpdate time2.kriss.re.kr
 
 ## 컨테이너 실행
-docker run -d --name app1 -p 80:80 -e GRAPHITE_HOST=<ip> diamond
+docker run -d --name graphite -p 2003:2003 -p 9200:9200 -p 80:80  graphite
 ```
 
 
@@ -163,5 +163,16 @@ diamond
 
 cd /etc/nginx
 nginx
+```
+
+## 실행
+```
+## 이미지생성 
+docker build --tag diamond .
+```
+  
+```
+## 컨테이너 생성
+docker run -d --name app1 -p 80:80 -e GRAPHITE_HOST=172.17.0.1 diamond
 ```
 
