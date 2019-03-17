@@ -15,6 +15,10 @@ RUN \
 WORKDIR /etc/mysql
 RUN sed -i "s/127.0.0.1/0.0.0.0/g" my.cnf
 
+# volume 설정
+# VOLUME ["/var/lib/mysql"]
+# docker inspect [컨테이너 명]으로 연결된 볼륨디렉토리 경로를 찾을수 있음.
+
 # entrypoint.sh 추가 후 실행
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
