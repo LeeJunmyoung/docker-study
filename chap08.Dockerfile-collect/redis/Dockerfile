@@ -12,6 +12,10 @@ RUN \
 RUN \
   apt-get install -y make
 
+# Install gcc
+RUN \
+  apt-get install -y gcc
+
 # Install Redis.
 RUN \
   cd /tmp && \
