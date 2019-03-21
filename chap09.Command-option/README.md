@@ -63,3 +63,6 @@ docker cp <컨테이너 이름>:<경로> <호스트경로>
 
 ## create
 > 이미지로 컨테이너를 생성하는 create명령. run 명령과는 달리 컨테이너를 생성만 할뿐 시작하지 않음.
+* -a, --attach=[] : 컨테이너의 표준입력(stdin), 표준출력(stdout), 표준에러(stderr)를 연결함. ex) -a=[stdin]
+* --add-host=[] : 컨테이너의 /etc/hosts에 호스트 이름과 IP주소를 추가함.
+* -c, --cpu-shares=0 : CPU자원 분배를 설정. 설정의 기본값은 1024이며 각 값은 상대적으로 적용됨.
