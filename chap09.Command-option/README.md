@@ -33,3 +33,15 @@ docker <옵션> <명령> <매개변수>
 * --tlskey="/home/exampleuser/.docker/key.pem" : 키 파일 경로를 설정
 * --tlsverify=false : tls 원격 인증을 사용. 데몬과 클라이언트 모두 인증서로 검증.
 * -v, --version=false : 버전정보를 
+
+## build
+```
+docker build <옵션> <docker 경로>
+```
+> Dockerfile 경로는 로컬 경로와 URL을 사용할 수 있고 -를 설정하면 표준 입력으로 Dockerfile내용을 받을 수 있다.
+
+* --force-rm=false : 이미지 생성에 실패했을 때도 임시 컨테이너를 삭제
+* --no-cache=false : 이전 빌드에서 생성된 캐시를 사용하지 않습니다. Docker는 이미지 생성 시간을 줄이기 위해서 Dockerfile의 각 과정을 캐시하는데, 이캐시를 사용하지 않고 처음부터 다시 이미지를 생성
+* -q, --quiet=false : Dockerfile의 RUN이 샐행한 출력 결과를 표시 하지 않습니다.
+* --rm=true : 이미지 생성에 성공했을 때 임시 컨테이너를 삭제.
+* -t, --tag="" : 저장소 이름, 이미지 이름, 태그를 설정. <저장소이름>/<이미지 이름>:<태그>
