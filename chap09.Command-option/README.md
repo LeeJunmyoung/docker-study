@@ -48,3 +48,9 @@ docker build <옵션> <docker 경로>
 
 ## commit
 > 컨터에너의 변경 사항을 이미지로 생성하는 commit 명령어
+```
+docker commit <옵션> <컨테이너이름,ID> <저장소이름>/<이미지이름>:태그
+```
+* -a, --author="" : "Foo Bar<foo@bar.com>"처럼 이미지를 생성한 사람의 정보를 설정.
+* -m, --message="" : 변경사항에 대한 로그 메시지 설정
+* -p, --pause=true : 이미지를 생성하는 동안 컨테이너를 일시 정지.
