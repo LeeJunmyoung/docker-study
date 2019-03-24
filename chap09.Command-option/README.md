@@ -66,3 +66,14 @@ docker cp <컨테이너 이름>:<경로> <호스트경로>
 * -a, --attach=[] : 컨테이너의 표준입력(stdin), 표준출력(stdout), 표준에러(stderr)를 연결함. ex) -a=[stdin]
 * --add-host=[] : 컨테이너의 /etc/hosts에 호스트 이름과 IP주소를 추가함.
 * -c, --cpu-shares=0 : CPU자원 분배를 설정. 설정의 기본값은 1024이며 각 값은 상대적으로 적용됨.
+* --cap-add=[] : 컨테이너에서 cgroups의 특정 Capability를 사용함. ALL을 지정하면 모든 Capability를 사용
+- https://linux.die.net/man/7/capabilities
+* --cap-drop=[] : 컨테이너에서 cgroups의 특정 Capability를 제외함.
+* cidfile="" : cid 파일 경로를 설정. cid 파일에는 생성된 컨테이너의 ID가 저장됨.
+* cidset="" : 멀티코어 CPU에서 컨테이너가 실행될 코어를 설정
+* --divice=[] : 호스트의 장치를 컨테이너에서 사용할 수 있도록 연결 . <호스트 장치>:<컨테이너장치>
+* --dns=[] : 컨테이너에서 사용할 DNS서버를 설정
+* --dns-search=[] : 컨테이너에서 사용할 DNS 검색 도메인을 설정
+* -e, --env=[] : 컨테이너에 환경 변수를 설정. 보통 설정 값이나 비밀번호를 전달할때 사용.
+* --entrypoint="" : Dockerfile의 ENTRYPOINT 설정을 무시하고 강제로 다른 값을 설정.
+* --env-file : 컨테이너의 환경변수가 설정된 파일을 적용.
