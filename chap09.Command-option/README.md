@@ -148,3 +148,14 @@ docker history <옵션> <이미지 이름, ID>
 ```
 * --no-trunc=false : 내용이 길어서 생략된 부분을 모두 출력
 * -q, --quiet=false : 이미지 ID만 출력.
+
+## images
+> 이미지 목록을 출력하는 명령
+```
+docker images <옵션> <이미지 이름>
+```
+* -a, --all=false : 부모 이미지까지 모두 표시함.
+* -f, --filter=[] : 출력 결과 필터를 설정. "dangling=true"를 설정하면 이름이 없는 이미지만 출력함.
+* --no-trunc=false : 내용이 길어서 생략된 부분을 모두 출력함.
+* -q, --quite=false : 이미지 ID만 출력.
+- 이름 없는 이미지를 모두 삭제 명령어 > docker rmi $(docker images -f "dangling=true" -q)
