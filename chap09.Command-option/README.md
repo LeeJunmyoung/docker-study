@@ -118,3 +118,12 @@ docker cp <컨테이너 이름>:<경로> <호스트경로>
 docker diff <컨테이너 이름, ID>
 ```
 
+## events
+> docker서버에서 일어난 이벤트를 실시간으로 출력하는 명령
+```
+docker events
+```
+* --since="" : 특정 timestamp 이후의 이벤트를 출력
+* --until="" : 특정 timestamp까지 이벤트를 출력
+  
+ 
