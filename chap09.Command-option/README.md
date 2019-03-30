@@ -173,3 +173,9 @@ cat hello.tar | docker import - hello
 tar -c . | docker import - hello
 ```
 
+## info
+> 현재 시스템 정보와 docker 컨테이너, 이미지 개수 , 설정 등을 출력하는 명령어
+```
+docker info
+```
+
