@@ -195,3 +195,10 @@ docker inspect -f "{{ .NetworkSettings.IPAddress }}" hello
 docker kill <옵션> <컨테이너 이름, ID>
 ```
 * -s, --signal="KILL" : 특정 시그널을 보냄.
+
+## load
+> tar 파일로 이미지를 생성하는 load 명령.
+```
+docker load <옵션>
+```
+* -i, --input="" : 표준 입력을 사용하지 않고 파일 경로를 설정하여 이미지를 생성.
