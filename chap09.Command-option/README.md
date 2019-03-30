@@ -179,3 +179,12 @@ tar -c . | docker import - hello
 docker info
 ```
 
+## inspect
+> 컨테이너와 이미지의 세부 정보를 JSON형태로 출력하는 명령.
+```
+docker inspect <옵션> <컨테이너 또는 이미지 이름, ID>
+
+# 컨테이너의 ip주소를 출력
+docker inspect -f "{{ .NetworkSettings.IPAddress }}" hello
+```
+* -f, --format="" : 지정한 정보만 출력.
