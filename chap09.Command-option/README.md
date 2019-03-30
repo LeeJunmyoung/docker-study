@@ -159,3 +159,17 @@ docker images <옵션> <이미지 이름>
 * --no-trunc=false : 내용이 길어서 생략된 부분을 모두 출력함.
 * -q, --quite=false : 이미지 ID만 출력.
 - 이름 없는 이미지를 모두 삭제 명령어 > docker rmi $(docker images -f "dangling=true" -q)
+
+## import
+> tar로 압축된 파일시스템으로부터 이미지를 생성하는 import 명령.
+> tar 파일의 URL을 설정할수 잇고, -를 설정하면 표준입력으로 tar 파일의 내용을 받을수 있음.
+```
+docker import <tar 파일의 URL 또는 - > <저장소 이름>/<이미지 이름>:<태그>
+
+# 해당 파일로 이미지를 생성하려면
+cat hello.tar | docker import - hello
+
+# 현재디렉토리에서 이미지로 생성하려면
+tar -c . | docker import - hello
+```
+
