@@ -188,3 +188,10 @@ docker inspect <옵션> <컨테이너 또는 이미지 이름, ID>
 docker inspect -f "{{ .NetworkSettings.IPAddress }}" hello
 ```
 * -f, --format="" : 지정한 정보만 출력.
+
+## kill
+> 컨테이너에 KILL시그널을 보내 컨테이너를 종료하는 명령
+```
+docker kill <옵션> <컨테이너 이름, ID>
+```
+* -s, --signal="KILL" : 특정 시그널을 보냄.
