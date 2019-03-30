@@ -146,3 +146,5 @@ docker export <컨테이너 이름, ID>
 ```
 docker history <옵션> <이미지 이름, ID>
 ```
+* --no-trunc=false : 내용이 길어서 생략된 부분을 모두 출력
+* -q, --quiet=false : 이미지 ID만 출력.
