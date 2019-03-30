@@ -134,3 +134,15 @@ docker exec <옵션> <컨테이너이름, ID> <명령> <매게변수>
 * -d, --detach=false : 명령을 백그라운드로 실행.
 * -i, --interactive=flase : 표준 입력(stdin)을 활성화 하며 컨테이너와 연결(attach)되어 있지 않더라도 표준 입력을 유지.
 * -t, --tty=false : tty모드(pseudo-TTY)를 사용. Bash를 사용하려면 이 옵션을 설정 해야함. 이 옵션을 설정하지 않으면 명령을 입력할수는 있지만 쉘이 표시 되지 않음.
+
+## export
+> 컨테이너의 파일시스템을 tar파일로 저장하는 명령.
+```
+docker export <컨테이너 이름, ID>
+```
+
+## history
+> 이미지의 히스토리를 출력하는 명령. 
+```
+docker history <옵션> <이미지 이름, ID>
+```
