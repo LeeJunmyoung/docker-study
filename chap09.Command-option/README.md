@@ -211,3 +211,9 @@ docker login <옵션> <도커 레지스트리 URL>
 * -e, --email="" : 로그인 할때 사용할 이메일설정.
 * -p, --password="" : 로그인할때 사용할 비밀번호를 설정.
 * -u, --username="" : 로그인할때 사용할 도커 레지스트리 계정을 설정.
+
+## logout
+> 도커 레지스트리에서 로그아웃하는 명령
+```
+docker logout <docker 레지스트리 서버 URL>
+```
