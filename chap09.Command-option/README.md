@@ -126,12 +126,11 @@ docker events
 * --since="" : 특정 timestamp 이후의 이벤트를 출력
 * --until="" : 특정 timestamp까지 이벤트를 출력
   
- ## exec
- > 외부에서 컨테이너 안의 명령을 실행하는 명령어
- ```
+## exec
+> 외부에서 컨테이너 안의 명령을 실행하는 명령어
+```
 docker exec <옵션> <컨테이너이름, ID> <명령> <매게변수>
- ```
- * -d, --detach=false : 명령을 백그라운드로 실행.
- * -i, --interactive=flase : 표준 입력(stdin)을 활성화 하며 컨테이너와 연결(attach)되어 있지 않더라도 표준 입력을 유지.
- * -t, --tty=false : tty모드(pseudo-TTY)를 사용. Bash를 사용하려면 이 옵션을 설정 해야함. 이 옵션을 설정하지 않으면 명령을 입력할수는 있지만 쉘이 표시 되지 않음.
- 
+```
+* -d, --detach=false : 명령을 백그라운드로 실행.
+* -i, --interactive=flase : 표준 입력(stdin)을 활성화 하며 컨테이너와 연결(attach)되어 있지 않더라도 표준 입력을 유지.
+* -t, --tty=false : tty모드(pseudo-TTY)를 사용. Bash를 사용하려면 이 옵션을 설정 해야함. 이 옵션을 설정하지 않으면 명령을 입력할수는 있지만 쉘이 표시 되지 않음.
