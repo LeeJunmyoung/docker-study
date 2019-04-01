@@ -353,3 +353,9 @@ docker top <컨테이너 이름, ID> <ps 옵션>
 ```
 docker unpause <컨테이너 이름, ID>
 ```
+
+## wait
+> 컨테이너가 정지될때까지 기다린뒤 exit code를 출력하는 명령
+```
+docker wait <컨테이너 이름, ID>
+```
