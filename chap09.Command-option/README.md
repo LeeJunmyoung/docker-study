@@ -220,3 +220,9 @@ docker logout <docker 레지스트리 서버 URL>
 
 ## logs
 > 컨테이너 로그를 출력하는 명령
+```
+docker logs <컨테이너 이름, ID>
+```
+* -f, --follow=false : 로그를 실시간으로 계속 출력함
+* -t, --timestamps=false : 로그 앞에 시간 값을 표시함
+* --tail="all" : 숫자를 지정하여 최종 로그에서 일정 개수만 출력
