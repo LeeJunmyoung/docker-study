@@ -310,3 +310,12 @@ docker run <옵션> <이미지 이름, ID> <명령> <매개변수>
 docker save <옵션> <이미지 이름>:<태그>
 ```
 * -o, --output="" : 저장할 파일명을 지정.
+
+## search
+> 도커 허브에서 이미지를 검색하는 명령
+```
+docker search <옵션> <검색어>
+```
+* --automated=false : 도커허브에 automated build 로 생성된 이미지만 표시.
+* --no-trunc=false : 내용이 길어서 생략된 부분을 모두 출력.
+* -s, --stars=0 : 특정 개수 이상 별표가 있는 이미지를 출력함.
