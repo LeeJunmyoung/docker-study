@@ -233,3 +233,8 @@ docker logs <컨테이너 이름, ID>
 docker port <컨테이너 이름, ID> <포트>
 ```
 
+## pause
+> 컨테이너에서 실행되고 있는 모든 프로세스를 일시 정지하는 명령어
+```
+docker pause <컨테이너 이름, ID>
+```
