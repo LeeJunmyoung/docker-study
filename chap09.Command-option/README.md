@@ -347,3 +347,9 @@ docker tag <옵션> <이미지 이름>:<태그> <저장소 주소,사용자명>/
 ```
 docker top <컨테이너 이름, ID> <ps 옵션>
 ```
+
+## unpause
+> pause 명령으로 일시정지된 컨테이너를 다시 시작하는 명령
+```
+docker unpause <컨테이너 이름, ID>
+```
