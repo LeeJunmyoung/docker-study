@@ -280,3 +280,11 @@ docker pull 192.168.0.11:5000/hello:0.1
 docker restart <옵션> <컨테이너 이름, ID>
 ```
 * -t, --time=10 : 일정 시간동안 컨테이너가 정지 될때까지 기다렸다가 컨테이너를 재시작함.
+
+## rm
+```
+docker rm <옵션> <컨테이너 이름, ID>
+```
+* -f, --force=false : 컨테이너를 강제로 정지한뒤 삭제함.
+* -l, --link=flase : docker run 명령의 --link 옵션을 사용하여 연결된 링크만 삭제함. 컨테이너는 삭제하지 않음.
+* -v, --volumes=false : 컨테이너에 연결된 데이터 볼륨을 삭제
