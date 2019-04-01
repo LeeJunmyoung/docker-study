@@ -238,3 +238,9 @@ docker port <컨테이너 이름, ID> <포트>
 ```
 docker pause <컨테이너 이름, ID>
 ```
+
+## ps
+> 컨테이너 목록을 출력하는 ps 명령.
+```
+docker ps <옵션>
+```
