@@ -288,3 +288,11 @@ docker rm <옵션> <컨테이너 이름, ID>
 * -f, --force=false : 컨테이너를 강제로 정지한뒤 삭제함.
 * -l, --link=flase : docker run 명령의 --link 옵션을 사용하여 연결된 링크만 삭제함. 컨테이너는 삭제하지 않음.
 * -v, --volumes=false : 컨테이너에 연결된 데이터 볼륨을 삭제
+
+## rmi
+> 이미지를 삭제하는 명령. 태그를 붙이지 않으면 latest 버전을 삭제함.
+```
+docker rmi <저장소 이름>/<이미지 이름, ID>:<태그>
+```
+* -f, --force=false : 이미지를 강제로 삭제.
+* --no-prune=false : 태그가 없는 부모이미지를 삭제하지 않음.
