@@ -217,3 +217,6 @@ docker login <옵션> <도커 레지스트리 URL>
 ```
 docker logout <docker 레지스트리 서버 URL>
 ```
+
+## logs
+> 컨테이너 로그를 출력하는 명령
