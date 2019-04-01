@@ -319,3 +319,13 @@ docker search <옵션> <검색어>
 * --automated=false : 도커허브에 automated build 로 생성된 이미지만 표시.
 * --no-trunc=false : 내용이 길어서 생략된 부분을 모두 출력.
 * -s, --stars=0 : 특정 개수 이상 별표가 있는 이미지를 출력함.
+
+## start
+> 컨테이너를 시작하는 명령.
+```
+docker start <옵션> <컨테이너 이름, ID>
+```
+* -a, --attach=false : 컨테이너에 표준입력, 표준출력, 표준에러를 연결하고 모든 시그널을 전달함.
+* -i, --interactive=false : 표준 입력을 활성화함.
+
+
